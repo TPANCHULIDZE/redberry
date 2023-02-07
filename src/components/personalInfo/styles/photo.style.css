@@ -1,0 +1,55 @@
+#photo-label {
+
+height: 22px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 1000;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height */
+
+
+/* off black */
+
+color: #1A1A1A;
+}
+
+#photo-text {
+  width: 69px;
+height: 17px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+#photo-button {
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 10px 12px;
+gap: 10px;
+
+
+width: 90px;
+height: 20px;
+
+
+background: #0E80BF;
+border-radius: 4px;
+}

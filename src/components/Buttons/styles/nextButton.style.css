@@ -1,0 +1,39 @@
+#nextButton {
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 18px 60px;
+gap: 20px;
+
+width: 101px;
+height: 30px;
+/* right: (100% - 20px); */
+bottom: 30px;
+
+background: #6B40E3;
+border-radius: 4px;
+}
+
+#next {
+  width: 51px;
+height: 20px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 1000;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height */
+
+letter-spacing: 0.08em;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}

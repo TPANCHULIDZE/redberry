@@ -1,0 +1,96 @@
+#email {
+  box-sizing: border-box;
+
+/* width: 798px; */
+height: 40px;
+
+background: #FFFFFF;
+border: 1px solid #BCBCBC;
+border-radius: 4px;
+
+/* Inside auto layout */
+display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#emailLabel {
+  /* width: 798px; */
+  height: 21px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 131% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #1A1A1A;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#emailHint {
+
+  height: 21px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 10px;
+  /* identical to box height, or 150% */
+  
+  display: flex;
+  align-items: center;
+  
+  /* შავი/500 */
+  
+  color: #2E2E2E;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#emailInput {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  outline: none;
+  left: 16px;
+  right: 16px;
+  top: 13px;
+  padding: 10px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height, or 131% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: rgba(0, 0, 0, 0.6);
+  
+}

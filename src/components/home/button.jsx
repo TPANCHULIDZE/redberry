@@ -9,7 +9,7 @@ const Button = () => {
 
   return (
     <div >
-      <button onClick={goToNextPage} className='font-sans' id="addCV">რეზიუმეს დამატება</button>
+      <button onClick={goToNextPage} id="addCV">რეზიუმეს დამატება</button>
   </div>
   )
 }

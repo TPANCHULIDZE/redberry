@@ -7,7 +7,7 @@ export const setLastName = (lastName) => createAction(PERSONAL_INFO.SET_LASTNAME
 
 export const setEmail = (email) => createAction(PERSONAL_INFO.SET_EMAIL, email);
 
-export const setImage = (image) => createAction(PERSONAL_INFO.SET_EMAIL, image);
+export const setImage = (image) => createAction(PERSONAL_INFO.SET_IMAGE, image);
 
 export const setNumber = (number) => createAction(PERSONAL_INFO.SET_NUMBER, number)
 

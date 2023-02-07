@@ -11,24 +11,13 @@
   height: 40px;
   left: calc(50% - 464px/2);
   top: 325px;
-
-  /* off black */
-
   background: #1A1A1A;
   border-radius: 8px;
-
-
-  /* font-family: 'Helvetica Neue'; */
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
-
   color: #FFFFFF;
-
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
