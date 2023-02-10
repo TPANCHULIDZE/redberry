@@ -1,0 +1,37 @@
+#add-knowledge {
+  height: 20px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+
+}
+
+#button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  gap: 20px;
+  /* position: absolute; */
+  width: 289px;
+  height: 30px;
+  left: calc(50% - 289px/2 - 665.5px);
+  /* top: 719px; */
+  margin-top: 30px;
+  background: #62A1EB;
+  border-radius: 4px;
+}

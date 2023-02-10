@@ -5,25 +5,19 @@ import { selectLastName, selectName } from '../../store/personalInfo/personalInf
 import './styles/name.style.css';
 import { ValidationIcons } from '../alerts/validationIcons';
 
- export const Name = ({validateName, validateLastName}) => {
+ export const Name = ({isSubmit}) => {
   const name = useSelector(selectName);
   const lastName = useSelector(selectLastName)
   const dispatch = useDispatch()
-  const [valName, setValName] = useState(false)
-  const [valLastName, setValLastName] = useState(false)
-
-  console.log(valName, valLastName)
-  console.log(validateName, validateLastName)
+  console.log(isSubmit, 'dd')
   const changeName = (event) =>{
     const { value } = event.target;
     dispatch(setName(value)); 
-    setValName(true)
   }
 
   const changeLastName = (event) => {
     const { value } = event.target;
     dispatch(setLastName(value)); 
-    setValLastName(true)
   }
 
   return (
@@ -34,7 +28,7 @@ import { ValidationIcons } from '../alerts/validationIcons';
           <label id="nameLabel">სახელი</label>
           <div id='name'>
             <input onChange={changeName} id="nameInput" placeholder='ტატო' value={name} />
-            <ValidationIcons validate={valName || validateName} val={name} option='name'/>
+            <ValidationIcons isSubmit={isSubmit} val={name} option='name'/>
           </div>
           <label id="nameHint">მინიმუმ 2 ასო. ქართული ასოები</label>
 
@@ -43,7 +37,7 @@ import { ValidationIcons } from '../alerts/validationIcons';
           <label id='nameLabel'>გვარი</label>
           <div id='name'  >
             <input onChange={changeLastName} id="nameInput" placeholder='ფანჩულიძე' value={lastName}/>
-            <ValidationIcons validate={valLastName || validateLastName} val={lastName} option='name'/>
+            <ValidationIcons isSubmit={isSubmit} val={lastName} option='name'/>
           </div>
           <label id='nameHint'>მინიმუმ 2 ასო. ქართული ასოები</label>
 

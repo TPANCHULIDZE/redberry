@@ -11,7 +11,7 @@ import { Name } from "../../components/personalInfo/name"
 import { Phone } from "../../components/personalInfo/phone"
 import { Photo } from "../../components/personalInfo/photo"
 import { selectPersonalInfo } from "../../store/personalInfo/personalInfo.select"
-import { CheckPersonalInfo } from "../../utils/personalInfo/checkPersonalInfo"
+import { checkPersonalInfo } from "../../utils/regExps/checkPersonalInfo"
 // import { validatesPersonalInfo } from "../../utils/personalInfo/checkPersonalInfo"
 import './styles/personalInfo.style.css'
 
@@ -25,16 +25,20 @@ const defaultValidates = {
 
 const PersonalInfo = () => {
   const navigator = useNavigate();
-  const [validates, setValidates] = useState(defaultValidates)
+  const [isSubmit, setIsSubmit] = useState(false)
   const personalInfo = useSelector(selectPersonalInfo)
-  
+
   const navigateNextPage = () => {
-    const info = CheckPersonalInfo(personalInfo)
-    setValidates(info);
+    const info = checkPersonalInfo(personalInfo)
+    setIsSubmit(true)
     console.log(info)
     const isValidate = Object.values(info).every(val => val)
     if(isValidate) navigator('/knowledge')
   }
+
+  useEffect(() => {
+    setIsSubmit(false)
+  }, [personalInfo])
 
   return (
     <div>
@@ -45,24 +49,24 @@ const PersonalInfo = () => {
         <div>
           <div className="grid-rows-5 space-y-5 mt-3">
             <div>
-              <Name validateName={validates.name} validateLastName={validates.lastName} />
+              <Name isSubmit={isSubmit} />
             </div>
             <div>
-              <Photo validate={validates.image}/>
+              <Photo isSubmit={isSubmit}/>
             </div>
             <div>
-              <AboutMe/>
+              <AboutMe isSubmit={isSubmit}/>
             </div>
             <div>
-              <Email validate={validates.email}/>
+              <Email isSubmit={isSubmit}/>
             </div>
             <div>
-              <Phone validate={validates.number}/>
+              <Phone isSubmit={isSubmit}/>
             </div>
           </div>
         </div>
-        <div onClick={navigateNextPage} id="next-page">
-          <NextButton />
+        <div onClick={navigateNextPage} id="next-page-personal">
+          <NextButton val="შემდეგი" />
         </div>
       </div>
     </div>

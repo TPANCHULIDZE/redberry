@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "helvatica-neue-lt": "^1.0.1",
     "react": "^18.2.0",
+    "react-datepicker": "^4.10.0",
     "react-dom": "^18.2.0",
     "react-images-uploading": "^3.1.7",
     "react-redux": "^8.0.5",
@@ -17,6 +18,7 @@
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
+    "rsuite": "^5.26.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

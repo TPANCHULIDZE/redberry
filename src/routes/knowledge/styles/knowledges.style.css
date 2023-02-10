@@ -1,0 +1,15 @@
+#knowledge {
+  position: absolute;
+  left: 70px;
+  top: 10px;
+  width: calc(50% - 70px);
+  /* height: 100%; */
+  background: #F9F9F9;
+}
+
+#next-page-knowledge {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 15%;
+  margin-bottom: 5%;
+}

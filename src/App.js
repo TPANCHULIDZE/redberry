@@ -1,7 +1,7 @@
 import Home from './routes/home/home'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Knowledge from './components/knowledge/knowledge';
+import Knowledge from './routes/knowledge/knowledges'
 import PersonalInfo from './routes/personalInfo/personalInfo';
 
 

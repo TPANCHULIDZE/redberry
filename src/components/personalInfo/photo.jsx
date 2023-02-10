@@ -6,17 +6,13 @@ import { setImage } from '../../store/personalInfo/personalInfo.actions';
 import { ValidationIcons } from '../alerts/validationIcons';
 import { useState } from 'react';
 
-export const Photo = ({validate}) => {
+export const Photo = ({isSubmit}) => {
   const image = useSelector(selectPhoto);
   const maxMbFileSize = 5 * 1024 * 1024;
   const dispatch = useDispatch();
-  const [valPhoto, setValPhoto] = useState(false)
-
 
   const uploadImage = (value) => {
     dispatch(setImage({image: value[0]['data_url'], name: value[0]['file']['name']}));
-    // dispatch(setImage(null))
-    setValPhoto(true)
   }
 
   return (
@@ -40,7 +36,7 @@ export const Photo = ({validate}) => {
             </button>}
         </ImageUploading>
         
-        <span>{image ? image.name : <ValidationIcons validate={valPhoto || validate} val="" />  }</span>
+        <span>{image ? image.name : <ValidationIcons isSubmit={isSubmit} val="" />  }</span>
         
     </div>
   )
