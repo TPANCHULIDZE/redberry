@@ -2,6 +2,7 @@ import './styles/backButton.style.css';
 import backPage from '../../files/logos/backPage.svg';
 
 export const BackButton = () => {
+  
   return (
     <div id="back-page">
         <div id='elips'>

@@ -1,0 +1,469 @@
+
+#employer {
+  box-sizing: border-box;
+
+/* width: 798px; */
+height: 40px;
+
+background: #FFFFFF;
+border: 1px solid #BCBCBC;
+border-radius: 4px;
+
+/* Inside auto layout */
+display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#employerLabel {
+  /* width: 798px; */
+  height: 21px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 131% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #1A1A1A;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#employerHint {
+
+  height: 21px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 10px;
+  /* identical to box height, or 150% */
+  
+  display: flex;
+  align-items: center;
+  
+  /* შავი/500 */
+  
+  color: #2E2E2E;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#employerInput {
+  /* employer: absolute; */
+  height: 100%;
+  width: 100%;
+  outline: none;
+  left: 16px;
+  right: 16px;
+  top: 13px;
+  padding: 10px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height, or 131% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: rgba(0, 0, 0, 0.6);
+  
+}
+
+
+#position {
+  box-sizing: border-box;
+
+/* width: 798px; */
+height: 40px;
+
+background: #FFFFFF;
+border: 1px solid #BCBCBC;
+border-radius: 4px;
+
+/* Inside auto layout */
+display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#positionLabel {
+  /* width: 798px; */
+  height: 21px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 131% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #1A1A1A;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#positionHint {
+
+  height: 21px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 10px;
+  /* identical to box height, or 150% */
+  
+  display: flex;
+  align-items: center;
+  
+  /* შავი/500 */
+  
+  color: #2E2E2E;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#positionInput {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  outline: none;
+  left: 16px;
+  right: 16px;
+  top: 13px;
+  padding: 10px;
+  
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height, or 131% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: rgba(0, 0, 0, 0.6);
+  
+}
+
+
+
+
+
+#startDateLabel {
+  width: 371px;
+height: 21px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 1000;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height, or 131% */
+
+display: flex;
+align-items: center;
+
+color: #1A1A1A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#startDateInput {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  
+left: 16px;
+right: 16px;
+top: 13px;
+/* outline: none; */
+
+
+border: #FFFFFF;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height, or 131% */
+
+display: flex;
+align-items: center;
+
+color: rgba(0, 0, 0, 0.6);
+
+}
+
+#startDateHint {
+  width: 371px;
+height: 21px;
+padding-top: 10px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* შავი/500 */
+
+color: #2E2E2E;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#startDate {
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 3px;
+  padding: 2px;
+
+  background: #FFFFFF;
+  background: #FFFFFF;
+  border: 1px solid hsl(105, 5%, 71%);
+  border-radius: 4px;
+
+
+  /* Inside auto layout */
+
+  display: flex;
+  align-items: center;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#startDate-container {
+  width: 46% ;
+}
+
+#endDateLabel {
+  width: 371px;
+height: 21px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 1000;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height, or 131% */
+
+display: flex;
+align-items: center;
+
+color: #1A1A1A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#endDateInput {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  
+left: 16px;
+right: 16px;
+top: 13px;
+/* outline: none; */
+
+
+border: #FFFFFF;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height, or 131% */
+
+display: flex;
+align-items: center;
+
+color: rgba(0, 0, 0, 0.6);
+
+}
+
+#endDateHint {
+  width: 371px;
+height: 21px;
+padding-top: 10px;
+
+/* font-family: 'Helvetica Neue'; */
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* შავი/500 */
+
+color: #2E2E2E;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#endDate {
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 3px;
+  padding: 2px;
+
+  background: #FFFFFF;
+  background: #FFFFFF;
+  border: 1px solid hsl(105, 5%, 71%);
+  border-radius: 4px;
+
+
+  /* Inside auto layout */
+
+  display: flex;
+  align-items: center;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#endDate-container {
+  width: 46% ;
+}
+
+#expDescription {
+  box-sizing: border-box;
+  height: 103px;
+
+  background: #ffffff;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+  border: 1px solid #BCBCBC;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+#expDescription-text {
+  /* position: absolute; */
+  width: 100%;
+  padding: 10px;
+  min-height: 100%;
+  left: 16px;
+  right: 16px;
+  top: 13px;
+  outline: none;
+ 
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+
+  /* identical to box height, or 131% */
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#expDescription-label {
+  height: 21px;
+
+  /* font-family: 'Helvetica Neue'; */
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 13px;
+  line-height: 17px;
+  
+  /* identical to box height, or 131% */
+
+  display: flex;
+  align-items: center;
+
+  color: #1A1A1A;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}

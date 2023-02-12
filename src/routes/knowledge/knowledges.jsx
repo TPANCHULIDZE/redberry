@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { setDeleteKnowledge } from "../../store/knowledge/knowledge.actions";
 import { checkKnowledge } from "../../utils/regExps/checkKnowledge";
 import { useEffect, useState } from "react";
+import { ShowResume } from "../../components/showResume/showResume";
 
 const defaultKnowledge = {
   uni: '',
@@ -30,21 +31,24 @@ const Knowledges = () => {
   const navigateNextPage = () => {
     dispatch(setDeleteKnowledge());
     const isValid = Object.values(knowledges).every(val => checkKnowledge(val))
-    // console.log(knowledges)
+    
     setIsSubmit(true);
-    if(isValid) navigator('/experience');
+    if(isValid) navigator('/resume');
   }
   
 
   const navigateBackPage = () => {
-    navigator('/personalInfo')
+    navigator('/experience')
   }
 
   return (
-    <div className="h-full">
-      <BackButton />
+    <div className="flex h-full">
+    <div className="w-1/2 h-full">
+      <div onClick={navigateBackPage}>
+        <BackButton />
+      </div>
       <div id="knowledge" >
-        <HeadLine page={2}/>
+        <HeadLine page={3}/>
         <Line />
         <div >
         {
@@ -64,6 +68,10 @@ const Knowledges = () => {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+      <div id="show-resume">
+        <ShowResume/>
       </div>
     </div>
   )

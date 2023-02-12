@@ -21,7 +21,7 @@ export const AddKnowledge = () => {
 
   return (
     <div id="button">
-      <button onClick={addMoreKnowledge} id="add-knowledge">მეტი გამოცდილების დამატება</button>
+      <button onClick={addMoreKnowledge} id="add-knowledge">სხვა სასწავლებლის დამატება</button>
     </div>
   )
 }

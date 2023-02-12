@@ -10,6 +10,7 @@ import { Email } from "../../components/personalInfo/email"
 import { Name } from "../../components/personalInfo/name"
 import { Phone } from "../../components/personalInfo/phone"
 import { Photo } from "../../components/personalInfo/photo"
+import { ShowResume } from "../../components/showResume/showResume"
 import { selectPersonalInfo } from "../../store/personalInfo/personalInfo.select"
 import { checkPersonalInfo } from "../../utils/regExps/checkPersonalInfo"
 // import { validatesPersonalInfo } from "../../utils/personalInfo/checkPersonalInfo"
@@ -33,16 +34,22 @@ const PersonalInfo = () => {
     setIsSubmit(true)
     console.log(info)
     const isValidate = Object.values(info).every(val => val)
-    if(isValidate) navigator('/knowledge')
+    if(isValidate) navigator('/experience')
   }
 
+  const navigateBackPage = () => {
+    navigator('/')
+  }
   useEffect(() => {
     setIsSubmit(false)
   }, [personalInfo])
 
   return (
-    <div>
-      <BackButton />
+    <div className="flex h-full">
+      <div className="w-1/2 h-full">
+      <div onClick={navigateBackPage}>
+        <BackButton />
+      </div>
       <div id="personalInfoSide">
         <HeadLine page={1}/>
         <Line />
@@ -68,6 +75,10 @@ const PersonalInfo = () => {
         <div onClick={navigateNextPage} id="next-page-personal">
           <NextButton val="შემდეგი" />
         </div>
+      </div>
+      </div>
+      <div id="show-resume">
+        <ShowResume/>
       </div>
     </div>
   ) 

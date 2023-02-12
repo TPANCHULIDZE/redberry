@@ -12,11 +12,23 @@ import { selectKnowledges } from "../../store/knowledge/knowledge.select";
 import "./styles/knowledge.style.css";
 import "rsuite/dist/rsuite.min.css";
 import { ValidationIcons } from "../alerts/validationIcons";
+import axios from "axios";
 
 export const Knowledge = ({ index, isSubmit }) => {
   const knowledges = useSelector(selectKnowledges);
   const dispatch = useDispatch();
   const currentKnowledge = knowledges[index];
+  const [degrees, setDegrees] = useState(null)
+
+  const fetchDegrees = async () => {
+    const {data} = await axios.get('https://resume.redberryinternship.ge/api/degrees')
+
+    setDegrees(data);   
+  }
+
+  useEffect(() => {
+    fetchDegrees()
+  }, [])
 
   const handleSetKnowledge = (event) => {
     const { name, value } = event.target;
@@ -72,33 +84,16 @@ export const Knowledge = ({ index, isSubmit }) => {
                   აარჩიეთ ხარისხი
                 </span>
               </option>
-              <option id="options">
-                <span id="options-text">საშუალო სკოლის დიპლომი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">ზოგადსაგანმანათლებლო დიპლომი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">ბაკალავრი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">მაგისტრი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">დოქტორი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">ასოცირებული ხარისხი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">სტუდენტი</span>
-              </option>
-              <option id="options">
-                <span id="options-text">კოლეჯი (ხარისხის გარეშე)</span>
-              </option>
-              <option id="options">
-                <span id="options-text">სხვა</span>
-              </option>
+              {
+                degrees ? (
+                  degrees.map(({id, title} )=> (
+                    <option id="options">
+                      <span id="options-text">{title}</span>
+                    </option>
+                  ))
+                ) : null
+              }
+              
             </select>
             <ValidationIcons
               option="degree"
@@ -121,7 +116,7 @@ export const Knowledge = ({ index, isSubmit }) => {
                 name="endDate"
                 placeholder="Select Date"
                 dateFormat="dd/mm/yyyy"
-                selected={
+                value={
                   currentKnowledge.endDate !== ""
                     ? new Date(
                         currentKnowledge.endDate.split("/").reverse().join("-")

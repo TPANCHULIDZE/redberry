@@ -1,16 +1,17 @@
-#personalInfoSide {
+#experiences {
   position: absolute;
   left: 70px;
   top: 10px;
   width: calc(50% - 70px);
-  height: 100%;
+  /* height: 100%; */
   background: #F9F9F9;
 }
 
-#next-page-personal {
- position: absolute;
- bottom: 20px;
- right: 0px;
+#next-page-experiences{
+  justify-content: space-between;
+  display: flex;
+  margin-top: 8%;
+  margin-bottom: 2%;
 }
 
 #show-resume {

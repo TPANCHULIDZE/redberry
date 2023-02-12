@@ -1,0 +1,10 @@
+#main-show-resume {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+}
+
+#main-content {
+  border: solid;
+  color: black;
+}

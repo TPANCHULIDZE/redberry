@@ -1,0 +1,42 @@
+
+
+#experience-cont {
+  width: 80%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+#resume-position {
+  font-style: solid;
+font-weight: 700;
+font-size: 100%;
+line-height: 150%;
+/* identical to box height */
+word-wrap: break-word;
+padding: 0px;
+color: rgb(5, 5, 5);
+}
+
+#resume-date {
+  font-style: solid;
+font-weight: 300;
+font-size: 100%;
+line-height: 150%;
+/* identical to box height */
+word-wrap: break-word;
+padding: 0px;
+color: rgb(5, 5, 5);
+}
+
+#resume-desc {
+  margin-top: 10px;
+  font-style: solid;
+font-weight: 500;
+font-size: 100%;
+line-height: 150%;
+/* identical to box height */
+word-wrap: break-word;
+padding: 0px;
+color: rgb(5, 5, 5);
+}
