@@ -20,7 +20,7 @@ export const ShowResume = () => {
   
   
   return (
-    <div id='resume-div'>
+    <div id='resume-div' className='flex grow'>
       <div id='cont'  className='w-full flex'>
           <div className=' w-1/2'>
             <div className='flex'>
@@ -95,10 +95,6 @@ export const ShowResume = () => {
             
           ))
         }
-
-      </div>
-      <div className='mt-2'>
-        <img id='icon'/>
 
       </div>
     </div>    

@@ -39,6 +39,14 @@
   color: #F93B1D;
 }
 
+#bottom-icon {
+  position: relative;
+  /* top: 50%; */
+  flex: none;
+  height: 10%;
+  left: 5%;
+}
+
 #about-me-cont {
   max-width: 100%;
 }

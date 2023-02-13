@@ -15,7 +15,6 @@ export const AddExperience = () => {
   const dispatch = useDispatch();
 
   const addMoreExperience = () => {
-    dispatch(setDeleteExperience())
     dispatch(setExperience())
   }
 

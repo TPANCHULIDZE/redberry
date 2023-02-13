@@ -9,7 +9,7 @@ export const setEmployer = (employer) => createAction(SET_EXPERIENCES_TYPES.SET_
 
 export const setStartDate = (startDate) => createAction(SET_EXPERIENCES_TYPES.SET_START_DATE, startDate);
 
-export const setEndDate = (endDate) => createAction(SET_EXPERIENCES_TYPES.SET_END_DATE, endDate);
+export const setEndDateKN = (endDate) => createAction(SET_EXPERIENCES_TYPES.SET_END_DATE, endDate);
 
 export const setExpDescription = (description) => createAction(SET_EXPERIENCES_TYPES.SET_EXP_DESCRIPTION, description);
 

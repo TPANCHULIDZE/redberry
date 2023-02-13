@@ -2,9 +2,23 @@
   /* position: absolute; */
   display: flex;
   justify-content: center;
+
 }
 
 #main-content {
   border: solid;
-  color: black;
+
+  color: grey;
+  width: 50%;
+  margin-top: 5%;
+}
+
+
+
+#alert-additional-content-5 {
+  position: absolute;
+  width: 230px;
+  height: 100px;
+  top: 10%;
+  left: 80%;
 }

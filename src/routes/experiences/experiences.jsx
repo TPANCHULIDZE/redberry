@@ -13,6 +13,7 @@ import { HeadLine } from '../../components/headlines/headline';
 import { Line } from '../../components/lines/line';
 import { SpaceLine } from '../../components/lines/spaceLine';
 import { ShowResume } from '../../components/showResume/showResume';
+import { handleChangeExperience } from '../../store/store';
 
 const Experiences = () => {
   const navigator = useNavigate();
@@ -27,7 +28,8 @@ const Experiences = () => {
 
   const navigateNextPage = () => {
     dispatch(setDeleteExperience());
-    const isValid = Object.values(experiences).every(val => checkExperience(val))
+    const updatedExp = handleChangeExperience()
+    const isValid = Object.values(updatedExp).every(val => checkExperience(val))
     setIsSubmit(true);
     console.log(isValid)
     if(isValid) navigator('/knowledge');
@@ -71,6 +73,9 @@ const Experiences = () => {
     </div>
       <div id="show-resume">
         <ShowResume/>
+        <div id='bottom-icon' className='mt-2 flex-none h-10'>
+          <img id='icon'/>
+        </div>
       </div>
     </div>
   )

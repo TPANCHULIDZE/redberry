@@ -32,7 +32,7 @@ const PersonalInfo = () => {
   const navigateNextPage = () => {
     const info = checkPersonalInfo(personalInfo)
     setIsSubmit(true)
-    console.log(info)
+    console.log('info',info)
     const isValidate = Object.values(info).every(val => val)
     if(isValidate) navigator('/experience')
   }
@@ -40,6 +40,7 @@ const PersonalInfo = () => {
   const navigateBackPage = () => {
     navigator('/')
   }
+
   useEffect(() => {
     setIsSubmit(false)
   }, [personalInfo])
@@ -77,8 +78,11 @@ const PersonalInfo = () => {
         </div>
       </div>
       </div>
-      <div id="show-resume">
+      <div id="show-resume" className="flex">
         <ShowResume/>
+        <div id='bottom-icon' className='mt-2 flex-none h-10'>
+          <img id='icon'/>
+        </div>
       </div>
     </div>
   ) 

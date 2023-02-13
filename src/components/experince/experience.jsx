@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { setEmployer, setExpDescription, setEndDate, setStartDate, setPosition } from "../../store/experiences/experiences.actions";
+import { setEmployer, setExpDescription, setEndDateKN, setStartDate, setPosition } from "../../store/experiences/experiences.actions";
 import { selectExperiences } from "../../store/experiences/experiences.select"
 import './styles/experience.style.css'
 import { ValidationIcons } from "../alerts/validationIcons";
@@ -114,7 +114,7 @@ export const Experience = ({isSubmit, index}) => {
                     ? new Date(date).toLocaleDateString("fr-FR")
                     : "";
 
-                  dispatch(setEndDate({ index, value }));
+                  dispatch(setEndDateKN({ index, value }));
                 }}
                 name="endDate"
                 placeholder="dd/mm/yyyy"

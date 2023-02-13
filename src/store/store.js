@@ -8,7 +8,6 @@ import logger from 'redux-logger';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['personalInfo', 'knowledges', 'experiences']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -16,3 +15,11 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = createStore(persistedReducer, applyMiddleware(logger));
 
 export const persistor = persistStore(store);
+
+export const handleChangeExperience = () => {
+  return store.getState().experiences
+}
+
+export const handleChangeKnowledges = () =>{
+  return store.getState().knowledges
+}

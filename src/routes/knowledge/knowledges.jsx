@@ -13,6 +13,7 @@ import { setDeleteKnowledge } from "../../store/knowledge/knowledge.actions";
 import { checkKnowledge } from "../../utils/regExps/checkKnowledge";
 import { useEffect, useState } from "react";
 import { ShowResume } from "../../components/showResume/showResume";
+import { handleChangeKnowledges } from "../../store/store";
 
 const defaultKnowledge = {
   uni: '',
@@ -30,10 +31,15 @@ const Knowledges = () => {
 
   const navigateNextPage = () => {
     dispatch(setDeleteKnowledge());
-    const isValid = Object.values(knowledges).every(val => checkKnowledge(val))
+    const updatedKnowledges = handleChangeKnowledges();
+    const isValid = Object.values(updatedKnowledges).every(val => checkKnowledge(val))
     
     setIsSubmit(true);
     if(isValid) navigator('/resume');
+  }
+
+  const handleIsSubmit = () => {
+    setIsSubmit(false)
   }
   
 
@@ -54,8 +60,9 @@ const Knowledges = () => {
         {
           indexs.map(index => <div> <Knowledge isSubmit={isSubmit} index={index}/> <SpaceLine /> </div>)
         }
-
+        <div onClick={handleIsSubmit}>
         <AddKnowledge/>
+        </div>
         </div>
         <div>
           <div id="next-page-knowledge">
@@ -72,6 +79,9 @@ const Knowledges = () => {
     </div>
       <div id="show-resume">
         <ShowResume/>
+        <div id='bottom-icon' className='mt-2 flex-none h-10'>
+          <img id='icon'/>
+        </div>
       </div>
     </div>
   )

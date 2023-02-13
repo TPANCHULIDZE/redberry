@@ -15,7 +15,6 @@ export const AddKnowledge = () => {
   const index = Object.keys(knowledges).length;
 
   const addMoreKnowledge = () => {
-    dispatch(setDeleteKnowledge())
     dispatch(setKnowledge({index, value: defaultKnowledge}))
   }
 

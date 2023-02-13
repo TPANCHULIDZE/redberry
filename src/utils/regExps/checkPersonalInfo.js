@@ -13,6 +13,6 @@ export const checkPersonalInfo = ({ name, lastName, image, number, email }) => {
     validatesPersonalInfo.email = checkByRegExps("email", email)
     validatesPersonalInfo.number = checkByRegExps("phone", number)
     validatesPersonalInfo.lastName = checkByRegExps("name", lastName)
-    validatesPersonalInfo.image = !!image
+    validatesPersonalInfo.image = (!!image)
     return validatesPersonalInfo;
 };
