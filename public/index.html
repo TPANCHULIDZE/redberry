@@ -26,6 +26,29 @@
     -->
     <title>React App</title>
   </head>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAfo_lbT5xEPzFsU1qM9OUzez18NJXdGxA",
+      authDomain: "cv-maker-70a6d.firebaseapp.com",
+      projectId: "cv-maker-70a6d",
+      storageBucket: "cv-maker-70a6d.appspot.com",
+      messagingSenderId: "1085873823155",
+      appId: "1:1085873823155:web:aba3c3accb84bf622cbfc6",
+      measurementId: "G-Y20G406W3H"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
